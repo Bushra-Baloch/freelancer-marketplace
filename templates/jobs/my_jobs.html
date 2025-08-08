@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>My Posted Jobs</h2>
+  {% if jobs %}
+    <ul>
+      {% for job in jobs %}
+        <li><strong>{{ job.title }}</strong> - Budget: ${{ job.budget }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>You haven't posted any jobs yet.</p>
+  {% endif %}
+{% endblock %}

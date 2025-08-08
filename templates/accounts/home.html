@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Welcome to Freelancer Marketplace</h2>
+  <p>
+    <a href="{% url 'login' %}">Login</a> or 
+    <a href="{% url 'register' %}">Register</a>
+  </p>
+
+  <p><a href="{% url 'job_list' %}">View All Jobs</a></p>
+{% endblock %}
